@@ -1,9 +1,60 @@
-var country = getColumn(url,1)
-var countryCode = getColumn(url,3)
-var region = getColumn(url,4)
-var income = getColumn(url,5)
-var population = getColumn(url,6)
-var gdp = getColumn(url,9)
+var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Geography/Countries%20and%20Territories.csv"
+var country = getColumn(url,1);
+var countryCode = getColumn(url,3);
+var regions = getColumn(url,4);
+var income = getColumn(url,5);
+var population = getColumn(url,6);
+var gdp = getColumn(url,9);
+
+function getCountry(region){
+  var matches = [];
+  for(var i=0; i<regions.length; i++){
+    if(regions[i].toLowerCase().includes(region.toLowerCase())){
+      matches.push(country[i]);
+    }
+  }
+  return matches;
+}
+//console.log(getCountry("South Asia"))
+
+function highestGDP(region){
+  var highest = 0;
+  var richestCountry = "";
+for(var i = 0; i < regions.length; i++){
+  if(regions[i] == region){
+
+  }
+  if((regions[i] == region && parseFloat(gdp[i]) >= highest)){
+ 
+    richestCountry = country[i];
+    highest = parseFloat(gdp[i]);
+  
+  }
+
+}
+if(richestCountry != ""){
+  return richestCountry;
+}
+return "";
+}
+
+console.log(highestGDP("North America"))
+
+// function getOldestTeam(division){
+//   var oldest = 3000;
+//   var oldestTeamname
+// for(var i = 0; i < divisions.length; i++){
+//   if((divisions[i] == division && joined[i] <= oldest)){
+//     oldestTeamname = team[i];
+//     oldest = joined[i];
+//   }
+
+// }
+// if(total == 0){
+//   return -1;
+// }
+// return total;
+// }
 
 
 //this is the utils file 
@@ -34,4 +85,3 @@ function getColumn(url, columnNumber){
 
 
       //this is the link to our country document 
-      var url = "https://raw.githubusercontent.com/b-mcavoy/datasets/main/Geography/Countries%20and%20Territories.csv"
