@@ -1,3 +1,11 @@
+var country = getColumn(url,1)
+var countryCode = getColumn(url,3)
+var region = getColumn(url,4)
+var income = getColumn(url,5)
+var population = getColumn(url,6)
+var gdp = getColumn(url,9)
+
+
 //this is the utils file 
 function getColumn(url, columnNumber){
     var column = [];
