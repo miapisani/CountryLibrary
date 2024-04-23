@@ -1,4 +1,4 @@
-****Country Library****
+# Country Library
 This set of functions can find the income, country code, population, reigon, and wealthiest countries in each reigon 
 #
 #### Finding a countries based on income
