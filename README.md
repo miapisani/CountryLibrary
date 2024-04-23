@@ -6,7 +6,7 @@ This set of functions can find the income, country code, population, reigon, and
 ###income level {string} - desired income level
 **`function getCountryFromIncome (income)`**
 #
-#####generating country codes based on country names
-######this function takes a country name as a parameter and returns the countries 2 letter code
-#######country name {string} - desired country code 
+generating country codes based on country names
+his function takes a country name as a parameter and returns the countries 2 letter code
+country name {string} - desired country code 
 **`function countryCodeFromCountry(countryName)`**
