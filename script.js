@@ -76,8 +76,8 @@ if (matches.length == 0)
 matches.push("No Matches")
 return matches;
 }
-// console.log (countryCodeFromCountry("brazil")); 
-
+console.log (countryCodeFromCountry("brazil"));     
+ 
 //this function takes an inputted country name and prints its population 
 function countryPopulation (countryName){
   var population = 0; 
@@ -90,8 +90,7 @@ function countryPopulation (countryName){
   matches.push("No Matches")
   return population
 
-}
-//console.log(countryPopulation("United States"));  
+}console.log(countryPopulation("United States"));  
 
 
 
